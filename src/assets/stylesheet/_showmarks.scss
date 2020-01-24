@@ -1,0 +1,52 @@
+.showmarks-section {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.showmarks-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $secondarybtnBgColor;
+  margin-bottom: 3rem;
+}
+.showmarks-heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+.marks-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+}
+th {
+  border: 1px solid $primarybtntextColor;
+  border-collapse: collapse;
+  background-color: $secondarybtnBgColor;
+  color: $primarytextColor;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  padding: 1.2rem;
+  text-align: center;
+}
+td {
+  border: 1px solid $primarybtntextColor;
+  border-collapse: collapse;
+  background-color: rgb(251, 251, 251);
+  color: $primarybtntextColor;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.08rem;
+  padding: 1.2rem;
+  text-align: center;
+}

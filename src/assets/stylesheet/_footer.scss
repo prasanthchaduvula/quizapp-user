@@ -1,0 +1,26 @@
+.footer-section {
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+.footer-wrapper {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-items {
+  margin-right: 1.3rem;
+  letter-spacing: 0.06rem;
+  color: $footertext;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.footer-copy {
+  color: $copytext;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+}

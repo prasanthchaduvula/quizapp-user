@@ -1,0 +1,23 @@
+.hero-section {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+.hero-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+.hero-text {
+  font-size: 4rem;
+  line-height: 1.5;
+  letter-spacing: 0.06rem;
+  font-weight: 500;
+  color: $primarybtntextColor;
+  margin-bottom: 3rem;
+}
+.hero-btn {
+  font-size: 1.5rem;
+  letter-spacing: 0.06rem;
+  font-weight: 400;
+}

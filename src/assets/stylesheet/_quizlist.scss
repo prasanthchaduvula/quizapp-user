@@ -1,0 +1,80 @@
+.quizlist-section {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.quizlist-heading-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.quizlist-heading {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.06rem;
+  color: $secondarybtnBgColor;
+  margin-bottom: 2rem;
+  height: fit-content;
+}
+.quizlist-submit-btn {
+  background: $quizsetTextbg;
+  // background: $primarybtnBgColor;
+  color: $primarybtntext;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: transparent;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  &:hover {
+    background: $primarybtnBghover;
+    border: none;
+  }
+}
+.quiz-card-wrapper {
+  display: flex;
+  margin: 1rem 0;
+}
+.question-no {
+  color: $primarybtntextColor;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+.question-card {
+  margin-left: 1rem;
+}
+.question-title {
+  color: $primarybtntextColor;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+  line-height: 1.5;
+}
+.question-answers {
+  margin-top: 1.3rem;
+}
+.question-answers-item {
+  margin: 0 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+  font-weight: 500;
+  background: $secondarybtnBgColor;
+  color: $primarybtntext;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: transparent;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+  &:hover {
+    background: $primarybtnBghover;
+    border: none;
+  }
+}
+.correct-answer {
+  background: $quizsetTextbg;
+}

@@ -1,0 +1,38 @@
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+.header-nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primarybtntextColor;
+  letter-spacing: 0.06rem;
+}
+.nav-item {
+  margin-left: 1.3rem;
+  letter-spacing: 0.06rem;
+  color: $primarybtntextColor;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.nav-item-btn {
+  background: $primarybtnBgColor;
+  color: $primarybtntext;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: transparent;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+  &:hover {
+    background: $primarybtnBghover;
+    border: none;
+  }
+}
