@@ -10,7 +10,7 @@ class Quizsets extends React.Component {
     };
   }
   componentDidMount() {
-    fetch('http://localhost:3001/api/v1/questions')
+    fetch('http://localhost:3001/api/v1/questions/')
       .then(res => res.json())
       .then(data => {
         this.setState({ questions: data.questions });
@@ -33,7 +33,10 @@ class Quizsets extends React.Component {
           <div className="quizsets-list">
             {quizsetName &&
               quizsetName.map(quizset => (
-                <NavLink className="quizset-text" to={`/quizsets/${quizset}`}>
+                <NavLink
+                  className="quizset-text"
+                  to={`/users/${localStorage.quizuserName}/quizsets/${quizset}`}
+                >
                   {quizset}
                 </NavLink>
               ))}

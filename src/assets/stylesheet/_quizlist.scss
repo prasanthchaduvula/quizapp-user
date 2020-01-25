@@ -58,6 +58,12 @@
 .question-answers {
   margin-top: 1.3rem;
 }
+.question-ans-selected {
+  color: $quizsetTextbg;
+  font-size: 1.3rem;
+  letter-spacing: 0.08rem;
+  font-weight: 500;
+}
 .question-answers-item {
   margin: 0 1rem;
   font-size: 1rem;

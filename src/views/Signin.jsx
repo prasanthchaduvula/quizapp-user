@@ -34,7 +34,7 @@ class Signin extends React.Component {
           localStorage.setItem('quizuserToken', data.token);
           localStorage.setItem('quizuserName', data.userName);
           this.props.handleIslogged(true);
-          this.props.history.push('/');
+          this.props.history.push(`/users/${localStorage.quizuserName}`);
         }
       });
   };
@@ -78,7 +78,7 @@ class Signin extends React.Component {
             />
             <div className="sign-footer">
               <p className="sign-footer-text">Don't have an account?</p>
-              <NavLink className="sign-footer-link" to="/signup">
+              <NavLink className="sign-footer-link" to="/admins/signup">
                 Sign up
               </NavLink>
             </div>

@@ -8,7 +8,8 @@ class Showquiz extends React.Component {
       show: false,
       quizname: '',
       filterqns: [],
-      marks: 0
+      marks: 0,
+      ans: false
     };
   }
 
@@ -32,7 +33,11 @@ class Showquiz extends React.Component {
     this.handleQuestions();
   }
 
-  handleAns = (_id, ans) => {
+  handleAns = (event, _id, ans) => {
+    // event.target.style.visibility = 'hidden';
+    this.setState({ ans: true });
+    event.target.parentElement.parentElement.innerText = event.target.innerText;
+    event.target.parentElement.style.visibility = 'hidden';
     this.setState({ show: true });
     let { marks, filterqns } = this.state;
     filterqns.map(question => {
@@ -59,13 +64,13 @@ class Showquiz extends React.Component {
       .then(res => res.json())
       .then(data => {
         if (data.success) {
-          this.props.history.push('/marks');
+          this.props.history.push(`/users/${localStorage.quizuserName}/marks`);
         }
       });
   };
 
   render() {
-    let { quizname, filterqns, show } = this.state;
+    let { ans, quizname, filterqns, show } = this.state;
     return (
       <div className="quizlist-section">
         <div className="quizlist-heading-section">
@@ -86,17 +91,23 @@ class Showquiz extends React.Component {
 
               <div className="question-card">
                 <p className="question-title">{question.title}</p>
-                <div className="question-answers">
-                  {question.answers.map(option => (
-                    <button
-                      onClick={() => {
-                        this.handleAns(question._id, option);
-                      }}
-                      className="question-answers-item"
-                    >
-                      {option}
-                    </button>
-                  ))}
+                <div
+                  className={`question-answers ${
+                    ans ? 'question-ans-selected' : ''
+                  }`}
+                >
+                  <div>
+                    {question.answers.map(option => (
+                      <button
+                        onClick={event => {
+                          this.handleAns(event, question._id, option);
+                        }}
+                        className="question-answers-item"
+                      >
+                        {option}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

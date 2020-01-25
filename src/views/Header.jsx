@@ -10,31 +10,44 @@ class Header extends React.Component {
 
   PrivateNav = () => {
     return (
-      <div>
-        <NavLink className="nav-item" to="/marks">
-          Marks
+      <>
+        <NavLink className="logo" to={`/users/${localStorage.quizuserName}`}>
+          Quiz
         </NavLink>
-        <NavLink
-          onClick={this.handleLogout}
-          className="nav-item nav-item-btn"
-          to="/"
-        >
-          LOGOUT
-        </NavLink>
-      </div>
+        <div>
+          <NavLink
+            className="nav-item"
+            to={`/users/${localStorage.quizuserName}/marks`}
+          >
+            Marks
+          </NavLink>
+          <NavLink
+            onClick={this.handleLogout}
+            className="nav-item nav-item-btn"
+            to="/"
+          >
+            LOGOUT
+          </NavLink>
+        </div>
+      </>
     );
   };
 
   PublicNav = () => {
     return (
-      <div>
-        <NavLink className="nav-item" to="/signin">
-          SIGN IN
+      <>
+        <NavLink className="logo" to="/users">
+          Quiz
         </NavLink>
-        <NavLink className="nav-item nav-item-btn" to="/signup">
-          SIGN UP
-        </NavLink>
-      </div>
+        <div>
+          <NavLink className="nav-item" to="/users/signin">
+            SIGN IN
+          </NavLink>
+          <NavLink className="nav-item nav-item-btn" to="/users/signup">
+            SIGN UP
+          </NavLink>
+        </div>
+      </>
     );
   };
   render() {
@@ -42,9 +55,6 @@ class Header extends React.Component {
       <>
         <div className="header-wrapper">
           <nav className="header-nav">
-            <NavLink className="logo" to="">
-              Quiz
-            </NavLink>
             {localStorage.quizuserToken ? this.PrivateNav() : this.PublicNav()}
           </nav>
         </div>

@@ -8,7 +8,7 @@ class Hero extends React.Component {
         <div className="hero-section">
           <center className="hero-wrapper">
             <p className="hero-text">Appear for quiz and test your IQ</p>
-            <NavLink className="hero-btn nav-item-btn" to="/signin">
+            <NavLink className="hero-btn nav-item-btn" to="/users/signin">
               Get Started
             </NavLink>
           </center>

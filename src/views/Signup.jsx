@@ -31,7 +31,7 @@ class Signup extends React.Component {
         if (data.success) {
           console.log(data);
           alert('successfully registered');
-          this.props.history.push('/signin');
+          this.props.history.push('/users/signin');
         } else {
           alert('enter valid details');
         }
@@ -101,7 +101,7 @@ class Signup extends React.Component {
             />
             <div className="sign-footer">
               <p className="sign-footer-text">Already have an account?</p>
-              <NavLink className="sign-footer-link" to="/signin">
+              <NavLink className="sign-footer-link" to="/admins/signin">
                 Sign in
               </NavLink>
             </div>
