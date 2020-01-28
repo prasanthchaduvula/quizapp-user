@@ -24,6 +24,9 @@ class App extends React.Component {
     return (
       <>
         <Switch>
+          <Route exact path="/">
+            <Hero />
+          </Route>
           <Route exact path="/users">
             <Header handleIslogged={this.handleIslogged} />
             <Hero />
@@ -47,6 +50,9 @@ class App extends React.Component {
     return (
       <>
         <Switch>
+          <Route exact path="/">
+            <Hero />
+          </Route>
           <Route exact path="/users/:username">
             <Header handleIslogged={this.handleIslogged} />
             <Home />
@@ -70,9 +76,6 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Route exact path="/">
-          <Hero />
-        </Route>
         {localStorage.quizuserToken
           ? this.PrivateRoutes()
           : this.PublicRoutes()}
